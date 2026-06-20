@@ -68,10 +68,8 @@ st.title("🌸 TeenHealth: Menstrual Anemia Advisor")
 st.caption("⚠️ *Disclaimer: This app utilizes international nutritional guidelines as an educational tool and does not substitute formal medical evaluation.*")
 
 # --- ORGANIC VIRAL WHATSAPP SHARE ENGINE ---
-# Auto-detects your deployed url path dynamically
-current_url = "https://streamlit.io"
-whatsapp_text = f"Hi! Check out this amazing free TeenHealth tool to track menstrual cycle health, evaluate anemia risk, and get localized iron food recipes: {current_url}"
-whatsapp_share_url = f"https://wa.me{whatsapp_text.replace(' ', '%20').replace(':', '%3A').replace('/', '%2F')}"
+current_url = "https://streamlit.app"
+whatsapp_share_url = "https://wa.me" + current_url
 
 st.markdown(f"""
     <a href="{whatsapp_share_url}" target="_blank" style="text-decoration: none;">
@@ -91,7 +89,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "📜 My Health History"
 ])
 
-# ==================== TAB 1: DIAGNOSTIC & MENSTRUAL ANEMIA SUGGESTIONS ====================
+# ==================== TAB 1: DIAGNOSTIC ====================
 with tab1:
     col1, col2 = st.columns([1, 1.2], gap="large")
     
@@ -201,3 +199,6 @@ with tab2:
         <div class='food-card'>
             <h4>🥬 Iron-Boosted Green Leafy Flatbread (Spinach Palak Paratha / Methi Puri)</h4>
             <p><b>Why it works:</b> Pureeing fresh spinach (Palak) or fenugreek leaves (Methi) directly into your grain dough creates an invisible, delicious iron-rich meal.</p>
+            <p><b>🍊 Vitamin C Catalyst Required:</b> Always squeeze fresh lemon juice over the hot flatbread to activate the iron!</p>
+        </div>
+        <div class='food-card'>
